@@ -1,0 +1,41 @@
+strong {
+	color: $c_ciel;
+}
+
+table {
+	border:1px solid $c_ciel;
+	border-collapse: collapse;
+	overflow: hidden;
+}
+
+thead {
+	background: $gradient;
+	color:$c_white;
+}
+tbody {}
+tfoot {}
+
+th{
+	padding: 20px 15px;
+	font-size: $space_s;
+	text-transform: uppercase;
+}
+td{
+	padding: $space_s;
+	vertical-align:middle;
+	font-size: $space_s;
+	border-bottom: solid 1px hsla(0,0%,0%,0.1);
+}
+
+table tr:nth-child(even) {
+	background: $c_snow;
+}
+
+td[colspan] {
+	background: $c_shadow;
+}
+
+.heroImage {
+	height:200px;
+	width:100%;
+}

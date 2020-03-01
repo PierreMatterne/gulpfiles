@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mon Blog</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+
+		<div class="headerContent">
+			<h1>Le blog</h1>
+		</div>
+
+		<div class="tabBar">
+			<div class="tabBarContent">
+				<div class="tab listPages" onclick="toggleActiveClass(this)">
+					<a href="index.html">Index</a>
+					<a href="404.html">404</a>
+					<div class="tabLegend">Pages</div>
+				</div>
+				<div class="tab tableOfContent" onclick="toggleActiveClass(this)">
+
+					<div id="TOC"></div>
+
+					<div class="tabLegend">Titres sur cette page</div>
+				</div>
+				<div class="tab lastArticles" onclick="toggleActiveClass(this)">
+					<a href="index.html">Index</a>
+					<a href="404.html">404</a>
+					<div class="tabLegend">Derniers articles</div>
+				</div>
+				<div class="tab listCategories" onclick="toggleActiveClass(this)">
+					<a href="#">Tarot</a>
+					<a href="#">Palais de mémoire</a>
+					<a href="#">Dessin</a>
+					<a href="#">Javascript</a>
+					<a href="#">Wordpress</a>
+					<div class="tabLegend">Catégories</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+<main>
+	
+
+	<div class="blocsContainer">
+
+		<div class="page">
+
+			<article>
+
+				<div class="heroImage" style="background: url('img/lego_05.jpg') no-repeat center; background-size:cover;"></div>
+
+				<h2>Palais de mémoire</h2>
+				
+				<div class="content">
+
+					<p>Tout au long des articles de ce blog, je vais raconter la constitution en direct d'un palais de mémoire. J'expériemente. C'est amusant à faire. Et cela servira peut-être un jour.</p>
+
+					<h3>Qu'est-ce qu'un palais de mémoire ?</h3>
+
+					<p>C'est une méthode pour mémoriser des listes.</p>
+
+
+
+					<p>Lorem ipsum dolor u sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima b blanditiis a autem vero ratione eveniet, i doloremque quidem mollitia suscipit incidunt non? Strong lorem ipsum dolor sit amet, em consectetur adipisicing elit. Explicabo a expedita, s soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
+
+					<p class="important">Dans un premier temps, lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, cum maiores ipsum ullam obcaecati id error reprehenderit tempora dolorum consectetur placeat suscipit molestiae, modi aspernatur repellendus soluta similique ex. Ducimus!</p>
+
+					<p class="solo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quidem repellendus obcaecati at suscipit debitis sapiente minus cupiditate dicta saepe incidunt, placeat libero, animi sequi, odit necessitatibus magni! Exercitationem, quis?</p>
+
+					<p>Tout au long des articles de ce blog, je vais raconter la constitution en direct d'un palais de mémoire. J'expériemente. C'est amusant à faire. Et cela servira peut-être un jour.</p>
+
+					
+
+				</div>
+				<div class="post_details">
+					Posté le 20 janvier 2020 | 4 commentaires | catégories : <a href="#">Truc</a> <a href="#">Machine</a>	<a href="#">Bidule</a>
+				</div>
+
+			</article>
+
+
+
+						<article id="host_202002131912">
+				<p>Ce contenu est remplacé par le shadow DOM</p>
+			</article>
+
+
+			<template>
+				<style>
+					.dates {
+						display: grid;
+						grid-gap: 30px;
+						grid-template-columns: repeat(7, 70px);
+						width: 670px;
+						margin: 10px auto 0;
+						text-align: center;
+					}
+
+					.wrapper {
+						height: 200px;
+						width: 100%;
+						margin: 50px auto 0;
+						position: relative;
+					}
+
+					.graphs {
+						height: 100%;
+						display: grid;
+						grid-gap: 30px;
+						grid-template-columns: repeat(7, 70px);
+						border-bottom: 2px solid #666;
+						border-left: 2px solid #666;
+						position: relative;
+						border-top: 1px dashed #999;
+					}
+
+					.graphs::before,
+					.graphs::after {
+						content: "";
+						position: absolute;
+						display: inline-block;
+					}
+
+					.graphs::before {
+						height: 10px;
+						background: #666;
+						width: 100%;
+						bottom: 0;
+						transform: skewX(-65deg);
+						left: 10px;
+					}
+
+					.graphs::after {
+						border-bottom: 1px dashed #999;
+						top: 50%;
+						left: 0px;
+						width: 100%;
+						z-index: -4;
+					}
+
+
+					.graph {
+						background: #fc0;
+						align-self: end;
+						transition: height 0.3s ease-in-out, background 0.3s ease-in-out;
+						height: 0%;
+						position: relative;
+					}
+
+					.graph::before,
+					.graph::after {
+						content: "";
+						display: inline-block;
+						background: inherit;
+						position: absolute;
+					}
+
+					.graph::before {
+						height: 10px;
+						transform: skewX(-65deg);
+						filter: brightness(1.2);
+						top: -10px;
+						width: 100%;
+						left: 10px;
+					}
+
+					.graph::after {
+						height: 100%;
+						filter: brightness(0.8);
+						top: -5px;
+						right: -20px;
+						width: 20px;
+						transform: skewY(-25deg);
+					}
+
+
+					.buttons {
+						margin-top: 10px;
+						text-align: center;
+					}
+
+					.button {
+						display: inline-block;
+						padding: 4px 8px;
+						border: 1px solid #666;
+						border-radius: 4px;
+						cursor: pointer;
+					}
+					.button:hover {
+						background: #ddd;
+					}
+
+					.lines {
+						position: absolute;
+						height: 100%;
+						width: 100%;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						opacity:0;
+						transition: opacity 0.3s ease-in-out;
+					}
+
+					.lines.active {
+						opacity:1;
+					}
+
+					line {
+						stroke:#000;
+						stroke-width:1;
+					}
+
+					input {
+						margin-left:30px;
+					}
+
+					h1 {
+						text-align: center;
+					}
+
+				</style>
+
+				<h1>Animated Graphs</h1>
+
+				<div class="wrapper">
+					<div class="graphs">
+						<div class="graph a2014"></div>
+						<div class="graph a2015"></div>
+						<div class="graph a2016"></div>
+						<div class="graph a2017"></div>
+						<div class="graph a2018"></div>
+						<div class="graph a2019"></div>
+						<div class="graph a2020"></div>
+					</div>
+
+					<div id="lines" class="lines">
+						<svg height="100%" width="100%">
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_0" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_1" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_2" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_3" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_4" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_5" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_6" />
+						</svg>
+					</div>
+				</div>
+
+
+
+				<div class="dates">
+					<div>2014</div>
+					<div>2015</div>
+					<div>2016</div>
+					<div>2017</div>
+					<div>2018</div>
+					<div>2019</div>
+					<div>2020</div>
+				</div>
+
+				<div class="buttons">
+					<div class="button" onclick="changeValue(0)">Tout à zéro</div>
+					<div class="button" onclick="changeValue(1)">Valeurs A</div>
+					<div class="button" onclick="changeValue(2)">Valeurs B</div>
+					<div class="button" onclick="changeValue(-1)">Aléatoires</div>
+
+					<input type="checkbox" name="showLine" onclick="toggleLine()">
+					<label for="showLine"> Montrer ligne</label>
+				</div>
+
+
+				<script>
+
+					values = [
+					[0, 0, 0, 0, 0, 0, 0],
+					[10, 30, 45, 45, 97, 28, 63],
+					[0, 17, 34, 50, 67, 84, 100]
+					];
+
+					function changeValue(num) {
+						let last_x = 0;
+						let last_y = 200;
+
+						var sr = this.shadowRoot;
+						var el = Array.from(sr.querySelectorAll('.graph'));
+						var el_line = Array.from(sr.querySelectorAll('.line'));
+
+						for (let i = 0; i < 7; i++) {
+							let val = 0;
+							if (num < 0) {
+								val = Math.floor(Math.random() * 100);
+							} else {
+								val = values[num][i];
+							}
+							let hue = val;
+
+							el[i].style.height = val + "%";
+							el[i].style.background = "hsl(" + hue + ",80%,50%)";	
+
+							el_line[i].setAttribute('x1', last_x);
+							el_line[i].setAttribute('y1', last_y);
+
+							last_x = 10+35*(i+1)+65*i;
+							last_y = 200-val*2;
+
+							if(i===0){
+								el_line[i].setAttribute('x1', last_x);
+								el_line[i].setAttribute('y1', last_y);
+							}
+
+							el_line[i].setAttribute('x2', last_x);  
+							el_line[i].setAttribute('y2', last_y);
+
+
+						}
+
+					}
+
+
+
+					function toggleLine(){
+						this.shadowRoot.querySelector('#lines').classList.toggle('active');
+					}
+
+					changeValue(-1);
+
+				</script>
+
+
+
+			</template>
+
+			<script>
+
+
+				// var shadowRoot = document.querySelector('#host').createShadowRoot();
+				var shadowRoot = document.querySelector('#host_202002131912').attachShadow({mode:'closed'}); 
+
+				shadowRoot.appendChild(document.querySelector('template').content);
+			</script>
+			<hr>
+						<article id="host_202002131913">
+				<p>Ce contenu est remplacé par le shadow DOM</p>
+			</article>
+
+
+			<template class="t2">
+				<style>
+					.dates {
+						display: grid;
+						grid-gap: 30px;
+						grid-template-columns: repeat(7, 70px);
+						width: 670px;
+						margin: 10px auto 0;
+						text-align: center;
+					}
+
+					.wrapper {
+						height: 200px;
+						width: 100%;
+						margin: 50px auto 0;
+						position: relative;
+					}
+
+					.graphs {
+						height: 100%;
+						display: grid;
+						grid-gap: 30px;
+						grid-template-columns: repeat(7, 70px);
+						border-bottom: 2px solid #666;
+						border-left: 2px solid #666;
+						position: relative;
+						border-top: 1px dashed #999;
+					}
+
+					.graphs::before,
+					.graphs::after {
+						content: "";
+						position: absolute;
+						display: inline-block;
+					}
+
+					.graphs::before {
+						height: 10px;
+						background: #666;
+						width: 100%;
+						bottom: 0;
+						transform: skewX(-65deg);
+						left: 10px;
+					}
+
+					.graphs::after {
+						border-bottom: 1px dashed #999;
+						top: 50%;
+						left: 0px;
+						width: 100%;
+						z-index: -4;
+					}
+
+
+					.graph {
+						background: #fc0;
+						align-self: end;
+						transition: height 0.3s ease-in-out, background 0.3s ease-in-out;
+						height: 0%;
+						position: relative;
+					}
+
+					.graph::before,
+					.graph::after {
+						content: "";
+						display: inline-block;
+						background: inherit;
+						position: absolute;
+					}
+
+					.graph::before {
+						height: 10px;
+						transform: skewX(-65deg);
+						filter: brightness(1.2);
+						top: -10px;
+						width: 100%;
+						left: 10px;
+					}
+
+					.graph::after {
+						height: 100%;
+						filter: brightness(0.8);
+						top: -5px;
+						right: -20px;
+						width: 20px;
+						transform: skewY(-25deg);
+					}
+
+
+					.buttons {
+						margin-top: 10px;
+						text-align: center;
+					}
+
+					.button {
+						display: inline-block;
+						padding: 4px 8px;
+						border: 1px solid #666;
+						border-radius: 4px;
+						cursor: pointer;
+					}
+					.button:hover {
+						background: #ddd;
+					}
+
+					.lines {
+						position: absolute;
+						height: 100%;
+						width: 100%;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						opacity:0;
+						transition: opacity 0.3s ease-in-out;
+					}
+
+					.lines.active {
+						opacity:1;
+					}
+
+					line {
+						stroke:#000;
+						stroke-width:1;
+					}
+
+					input {
+						margin-left:30px;
+					}
+
+					h1 {
+						text-align: center;
+					}
+
+				</style>
+
+				<h1>Animated Graphs</h1>
+
+				<div class="wrapper">
+					<div class="graphs">
+						<div class="graph a2014"></div>
+						<div class="graph a2015"></div>
+						<div class="graph a2016"></div>
+						<div class="graph a2017"></div>
+						<div class="graph a2018"></div>
+						<div class="graph a2019"></div>
+						<div class="graph a2020"></div>
+					</div>
+
+					<div id="lines" class="lines l2">
+						<svg height="100%" width="100%">
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_0" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_1" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_2" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_3" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_4" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_5" />
+							<line x1="0" y1="0" x2="200" y2="200" class="line line_6" />
+						</svg>
+					</div>
+				</div>
+
+
+
+				<div class="dates">
+					<div>2014</div>
+					<div>2015</div>
+					<div>2016</div>
+					<div>2017</div>
+					<div>2018</div>
+					<div>2019</div>
+					<div>2020</div>
+				</div>
+
+				<div class="buttons">
+					<div class="button" onclick="changeMyValue(0)">Tout à zéro</div>
+					<div class="button" onclick="changeMyValue(1)">Valeurs A</div>
+					<div class="button" onclick="changeMyValue(2)">Valeurs B</div>
+					<div class="button" onclick="changeMyValue(-1)">Aléatoires</div>
+
+					<input type="checkbox" name="showLine" onclick="toggleMyLine()">
+					<label for="showLine"> Montrer ligne</label>
+				</div>
+
+
+				<script>
+
+					values = [
+					[0, 0, 0, 0, 0, 0, 0],
+					[10, 30, 45, 45, 97, 28, 63],
+					[0, 17, 34, 50, 67, 84, 100]
+					];
+
+					function changeMyValue(num) {
+						let last_x = 0;
+						let last_y = 200;
+
+						var sr = this.shadowRoot2;
+						var el = Array.from(sr.querySelectorAll('.graph'));
+						var el_line = Array.from(sr.querySelectorAll('.line'));
+
+						for (let i = 0; i < 7; i++) {
+							let val = 0;
+							if (num < 0) {
+								val = Math.floor(Math.random() * 100);
+							} else {
+								val = values[num][i];
+							}
+							let hue = val;
+
+							el[i].style.height = val + "%";
+							el[i].style.background = "hsl(" + hue + ",80%,50%)";	
+
+							el_line[i].setAttribute('x1', last_x);
+							el_line[i].setAttribute('y1', last_y);
+
+							last_x = 10+35*(i+1)+65*i;
+							last_y = 200-val*2;
+
+							if(i===0){
+								el_line[i].setAttribute('x1', last_x);
+								el_line[i].setAttribute('y1', last_y);
+							}
+
+							el_line[i].setAttribute('x2', last_x);  
+							el_line[i].setAttribute('y2', last_y);
+
+
+						}
+
+					}
+
+
+
+					function toggleMyLine(){
+						this.shadowRoot.querySelector('#lines.l2').classList.toggle('active');
+					}
+
+					changeMyValue(-1);
+
+				</script>
+
+
+
+			</template>
+
+			<script>
+
+
+				// var shadowRoot = document.querySelector('#host').createShadowRoot();
+				var shadowRoot2 = document.querySelector('#host_202002131913').attachShadow({mode:'open'});
+
+				shadowRoot2.appendChild(document.querySelector('template.t2').content);
+			</script>
+
+
+
+		</div>
+
+
+		<aside>
+	<article>
+		<h2>À propos</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quas at laudantium harum nostrum tempora adipisci, veniam deserunt voluptatem. Veritatis fuga nostrum eveniet non accusantium. Animi laborum rerum, doloremque eveniet?</p>
+	</article>
+
+	<article>
+		<h2>Styles de cadre</h2>
+
+
+		<div id="demo">
+
+
+			<div class="boldborder">
+				<h2>Lorem ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam omnis incidunt laboriosam minus, laborum debitis itaque quae accusantium, nam ex illo rerum ullam, iste illum. Minima, nam ratione quae consequuntur.</p>
+			</div>
+
+			<div class="thin">
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias minima praesentium fuga eligendi, ea. Numquam quia, dignissimos voluptatem officia molestias debitis dicta est eveniet, quas incidunt a non vel libero!</p>
+			</div>
+
+			<div class="carte">
+				<h2>Lorem ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ipsam eligendi enim. Illum porro architecto debitis deleniti, aut optio. Repudiandae, accusamus. Quos deserunt sequi autem ipsa veritatis laudantium ratione tenetur.</p>
+			</div>
+
+			<div class="old">
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolores nisi aliquam rerum! Enim fugiat, expedita excepturi velit, accusamus a dolorem voluptatem nesciunt similique natus perferendis quaerat mollitia vel eos!</p>
+			</div>
+
+			<div class="obvious">
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis voluptatibus quibusdam quod voluptate, dolores explicabo inventore tempore velit natus commodi consectetur rem quas aut at consequuntur nam asperiores, sunt maiores?</p>
+			</div>
+
+			<div class="cite">
+				<p>Lorem ipsum dolor sit amet !</p>
+			</div>
+
+		</div>
+
+
+
+	</article>
+</aside>
+
+
+
+	</div>
+
+
+
+
+	
+</main>
+
+
+
+<footer>FOOTER</footer>
+<script src="js/main.min.js"></script>
+</body>
+</html>

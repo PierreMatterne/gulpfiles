@@ -1,0 +1,27 @@
+a {
+	text-decoration: none;
+	color: $c-ciel;
+}
+
+article {
+
+}
+
+.post_details {
+	border-top:1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	color: #999;
+	font-size:0.9em;
+	margin:0.5em 0 1em;
+	padding:0.5em 0;
+}
+
+
+hr {
+	height: 10px;
+	width: 80%;
+	background: #def;
+	border: none;
+	position: relative;
+}
+

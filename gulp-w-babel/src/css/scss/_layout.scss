@@ -1,0 +1,13 @@
+body {
+	display: grid;
+	grid-template-rows: auto 100px; // main, footer
+	grid-gap:0;
+	background: $bodyBg;
+	padding-top:$headerHeightCorrection;
+}
+
+main {
+	width:100%;
+	padding:$space_m; 
+	margin:0;
+}

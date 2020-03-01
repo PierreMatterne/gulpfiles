@@ -1,0 +1,81 @@
+header {
+	position: fixed;
+	width:100%;
+	top:0; right:0; left:0;
+	color: $c_white;
+	z-index:400;
+	box-shadow:0 0 80px #fff, 0 0 80px #fff, 0 0 80px #fff, 0 0 80px #fff;
+}
+
+.headerContent {
+	background: $gradient;
+	z-index:401;
+	border-bottom:2px solid $c_blue;
+	box-shadow:$boxShadow;
+}
+
+.tabBar {
+	position: absolute;
+	bottom:-17px;
+	height:15px;
+	left:0;
+	right:0;
+	z-index:-1;
+}
+
+.tabBarContent {
+	width:900px;
+	margin:0 auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: $space_s;
+	pointer-events: none;
+}
+
+.tab {
+	border-top: none;
+	border-bottom: none;
+	border-radius:0 0 $space-s $space-s;
+	background: #fff;
+	color:#999;
+	align-self:start;
+	transform: translateY(-100%) translateY(20px);
+	transition: transform $transition;
+	cursor: pointer;
+	padding:$space_l $space_s;
+	pointer-events: auto;
+	box-shadow:inset 0px 0px 0px 1px #ddd;
+}
+
+.tabLegend {
+	position: absolute;
+	bottom:$space_xs;
+	width:100%;
+	text-align: center;
+	font-size:0.7rem;
+	color:#fff;
+	text-transform: uppercase;
+	background: $c_ciel;
+	left:0; right:0; bottom:0;
+	cursor:pointer;
+	line-height:23px;
+	border-bottom-left-radius: $space_s;
+	border-bottom-right-radius: $space_s;
+	border:1px solid $c_blue;
+	border-top:none;
+}
+
+.tab:hover {
+	box-shadow:$boxShadow, inset 0px 0px 0px 1px #ddd;
+}
+
+.tab.active {
+	transform: translateY(-5%);
+	cursor: auto;
+}
+
+.tab a {
+	display: block;
+	margin: $space_s 0;
+	font-size:0.9rem;
+}
